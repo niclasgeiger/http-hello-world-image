@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting listener on port 8080 to reply to all requests...")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", hello)
 	http.ListenAndServe(":8080", mux)
